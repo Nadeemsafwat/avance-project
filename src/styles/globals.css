@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #FAFAFA;
+    color: #0A1F44;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #C9A96E;
+    color: #0A1F44;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #0A1F44;
+  }
+}
+
+@layer components {
+  .section-tag {
+    @apply font-mono text-xs tracking-[0.3em] uppercase text-gold;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-light text-primary leading-tight;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-3 bg-primary text-white font-body font-light text-sm tracking-widest uppercase px-8 py-4 hover:bg-gold hover:text-primary transition-all duration-500 ease-luxury;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-3 border border-primary text-primary font-body font-light text-sm tracking-widest uppercase px-8 py-4 hover:bg-primary hover:text-white transition-all duration-500 ease-luxury;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-3 text-primary font-body font-light text-sm tracking-widest uppercase hover:gap-5 transition-all duration-300;
+  }
+
+  .gold-line {
+    @apply w-12 h-px bg-gold;
+  }
+
+  .nav-link {
+    @apply font-body font-light text-sm tracking-widest uppercase text-white/80 hover:text-white transition-colors duration-300 relative;
+  }
+
+  .nav-link.active {
+    @apply text-gold;
+  }
+
+  .card-hover {
+    @apply transition-all duration-700 ease-luxury;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-2 shadow-2xl;
+  }
+
+  .overlay-dark {
+    @apply absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-all duration-700;
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+  .stagger-5 { transition-delay: 0.5s; }
+  .stagger-6 { transition-delay: 0.6s; }
+}
