@@ -13,6 +13,7 @@ const featuredProjects = [
     color: '#0A1F44',
     gradient: 'linear-gradient(135deg, #0A1F44 0%, #1E3A8A 100%)',
     aspect: '4/5',
+    image: '/Images/mv.jpeg',
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const featuredProjects = [
     color: '#1E3A8A',
     gradient: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
     aspect: '4/5',
+    image: '/Images/advida.jpeg',
   },
   {
     id: 3,
@@ -35,6 +37,7 @@ const featuredProjects = [
     color: '#0D2759',
     gradient: 'linear-gradient(135deg, #0D2759 0%, #C9A96E 100%)',
     aspect: '4/5',
+    image: '/Images/Khowair.jpeg'
   },
 ]
 

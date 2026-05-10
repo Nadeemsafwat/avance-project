@@ -18,7 +18,12 @@ export default function ProjectCard({ project, index = 0 }) {
           className="absolute inset-0 transition-transform duration-[1200ms] ease-luxury group-hover:scale-110"
           style={{
             backgroundColor: project.color || '#1E3A8A',
-            backgroundImage: project.gradient,
+            backgroundImage: project.image
+            ? `url(${project.image})`
+            : project.gradient
+            ,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         />
 

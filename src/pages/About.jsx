@@ -6,9 +6,10 @@ const team = [
   {
     name: 'Ahmed El Shenawy',
     role: 'Founder & Principal',
-    bio: 'With 10 years shaping luxury environments across the Middle East and Europe, Layla brings a rare blend of cultural sensitivity and architectural rigor.',
+    bio: 'With 10 years shaping luxury environments across the Middle East and Egypt, Ahmed brings a rare blend of cultural sensitivity and architectural rigor.',
     initials: 'LM',
     color: '#0A1F44',
+    image: '/Images/AS.jpeg',
   },
   {
     name: 'Omar Mohamed',
@@ -16,6 +17,8 @@ const team = [
     bio: 'A graduate of the Architectural Association, Omar specializes in facade systems and contextual urbanism that balance boldness with belonging.',
     initials: 'KR',
     color: '#1E3A8A',
+    image: '/Images/OM.jpeg',
+
   },
   {
     name: 'Ahmed Shawky',
@@ -23,13 +26,15 @@ const team = [
     bio: "Ahmed's background in fine arts and product design informs her obsessive attention to material selection, texture, and tactile experience.",
     initials: 'SN',
     color: '#C9A96E',
+    image: '/Images/AHS.jpeg',
   },
   {
-    name: 'Ahmed Abdelghany',
+    name: 'Ibrahim Adel',
     role: 'Project Director',
-    bio: 'Ahmed ensures every project is delivered on time and beyond expectation, coordinating complex teams across multiple international sites.',
+    bio: 'Ibrahim ensures every project is delivered on time and beyond expectation, coordinating complex teams across multiple international sites.',
     initials: 'OK',
     color: '#0D2759',
+    image: '/Images/IA.jpeg',
   },
 ]
 
@@ -182,13 +187,23 @@ export default function About() {
                 className={`group animate-on-scroll stagger-${i + 1}`}
               >
                 {/* Avatar */}
-                <div
-                  className="w-full aspect-square flex items-center justify-center relative overflow-hidden mb-5"
-                  style={{ background: `linear-gradient(135deg, ${member.color} 0%, ${member.color}cc 100%)` }}
-                >
-                  <span className="font-display text-5xl font-light text-white/80">{member.initials}</span>
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                </div>
+<div className="w-full aspect-square relative overflow-hidden mb-5">
+  {member.image ? (
+    <img
+      src={member.image}
+      alt={member.name}
+      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+    />
+  ) : (
+    <div
+      className="w-full h-full flex items-center justify-center"
+      style={{ background: `linear-gradient(135deg, ${member.color} 0%, ${member.color}cc 100%)` }}
+    >
+      <span className="font-display text-5xl font-light text-white/80">{member.initials}</span>
+    </div>
+  )}
+  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+</div>
                 <h3 className="font-display text-xl font-light text-primary">{member.name}</h3>
                 <p className="font-mono text-[10px] tracking-[0.2em] text-gold uppercase mt-1 mb-3">{member.role}</p>
                 <p className="font-body font-light text-primary/50 text-sm leading-relaxed">{member.bio}</p>
