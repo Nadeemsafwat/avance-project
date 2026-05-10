@@ -266,7 +266,7 @@ export default function Contact() {
                 <p className="font-display text-xl font-light text-white mb-1">7-5B Polygon, Sodic West</p>
                 <p className="font-mono text-xs tracking-widest text-gold/60 uppercase">Giza, Egypt</p>
                 <a
-                  href="https://maps.google.com"
+                  href="https://maps.app.goo.gl/uYx3bReTqhqPaWfh8?g_st=ic"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 font-mono text-xs tracking-widest text-gold uppercase border border-gold/40 px-6 py-3 hover:bg-gold hover:text-primary transition-all duration-300"
